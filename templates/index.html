@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🦆 Trò chơi đua vịt</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <!-- ✅ SweetAlert2 -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<div id="cheer" class="cheer"></div>
+
+<body>
+  <h1>🦆 Trò chơi đua vịt!</h1>
+
+  <label>Số lượng vịt: 
+    <input type="number" id="duckCount" min="2" max="10" value="4">
+    <button onclick="createNameInputs()">Đặt tên</button>
+  </label>
+
+  <div id="nameInputs"></div>
+  <button onclick="setupRace()">Tạo đường đua</button>
+
+  <div id="raceArea"></div>
+  <button onclick="startRace()">Bắt đầu!</button>
+  <h2 id="winner"></h2>
+
+  <h3>Bảng điểm</h3>
+  <ul id="scoreBoard"></ul>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
